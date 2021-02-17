@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/LIGTH_PRIMARY_COLOR">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvProduct"
@@ -14,6 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/DARK_PRIMARY_COLOR"
 
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
@@ -36,12 +38,76 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-
-
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/nombre"
+                android:textColor="@color/SECONDARY_TEXT"
+                app:layout_constraintStart_toEndOf="@+id/ivProduct"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNombreEquipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="9dp"
+                android:textColor="@color/PRIMARY_TEXT"
+                android:text="@string/nombre_equipo"
+                app:layout_constraintStart_toEndOf="@+id/ivProduct"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+            <TextView
+                android:id="@+id/tvPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/SECONDARY_TEXT"
+                android:layout_marginTop="16dp"
+                android:text="@string/precio_clp"
+                app:layout_constraintStart_toEndOf="@+id/ivProduct"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreEquipo" />
+
+            <TextView
+                android:id="@+id/tvPrecioProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/PRIMARY_TEXT"
+                android:layout_marginTop="8dp"
+                android:text="@string/precio"
+                app:layout_constraintStart_toEndOf="@+id/ivProduct"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrecio" />
+
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="62dp"
+                android:text="@string/codigo_de_producto"
+                android:textColor="@color/SECONDARY_TEXT"
+                app:layout_constraintStart_toEndOf="@+id/ivProduct"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrecioProducto" />
+
+            <TextView
+                android:id="@+id/tvIdProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="62dp"
+                android:text="@string/codigo"
+                android:textColor="@color/PRIMARY_TEXT"
+                app:layout_constraintStart_toEndOf="@+id/tvId"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrecioProducto" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

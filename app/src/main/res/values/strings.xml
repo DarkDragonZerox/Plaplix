@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Plaplix</string>
+    <string name="nombre">Nombre</string>
+    <string name="nombre_equipo">Nombre equipo</string>
+    <string name="precio_clp">Precio CLP</string>
+    <string name="precio">Precio</string>
+    <string name="codigo_de_producto">Codigo de Producto</string>
+    <string name="codigo">Codigo</string>
+    <string name="codigo_de_producto">Codigo de Producto</string>
 </resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvPrecioAnterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Precio Anterior"
+        android:textColor="@color/SECONDARY_TEXT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPreciodt" />
+
+    <TextView
+        android:id="@+id/tvPrecioAnteriorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Precio Anterior"
+        android:textColor="@color/PRIMARY_TEXT"
+        app:layout_constraintStart_toEndOf="@+id/tvPrecioAnterior"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecioDetail" />
+
+    <TextView
+        android:id="@+id/tvPrecioDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Precio Detail"
+        android:textColor="@color/PRIMARY_TEXT"
+        app:layout_constraintStart_toEndOf="@+id/tvPreciodt"
+        app:layout_constraintTop_toBottomOf="@+id/tvCodigoDetail" />
+
+    <TextView
+        android:id="@+id/tvPreciodt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/precio_clp"
+        android:textColor="@color/SECONDARY_TEXT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcodigodet" />
+
+    <ImageView
+        android:id="@+id/ivImageDetail"
+        android:layout_width="203dp"
+        android:layout_height="218dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvModelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Modelo"
+        android:textColor="@color/SECONDARY_TEXT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImageDetail" />
+
+    <TextView
+        android:id="@+id/tvModeloDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Modelo Detail"
+        android:textColor="@color/PRIMARY_TEXT"
+        app:layout_constraintStart_toEndOf="@+id/tvModelo"
+        app:layout_constraintTop_toBottomOf="@+id/ivImageDetail" />
+
+    <TextView
+        android:id="@+id/tvcodigodet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/codigo_de_producto"
+        android:textColor="@color/SECONDARY_TEXT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
+
+    <TextView
+        android:id="@+id/tvCodigoDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Codigo Detail"
+        android:textColor="@color/PRIMARY_TEXT"
+        app:layout_constraintStart_toEndOf="@+id/tvcodigodet"
+        app:layout_constraintTop_toBottomOf="@+id/tvModeloDetail" />
+
+    <TextView
+        android:id="@+id/tvDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Caracteristicas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecioAnterior" />
+
+    <TextView
+        android:id="@+id/tvDescripcionDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Caracteristicas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescripcion" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Email"
+        android:layout_width="51dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="55dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/sym_action_email" />
+</androidx.constraintlayout.widget.ConstraintLayout>
