@@ -7,7 +7,7 @@ class RetrofitClient {
     companion object {
         private const val BASE_URL =  "https://my-json-server.typicode.com/Himuravidal/FakeAPIdata/"
 
-        fun retrofitInstance(): ProductApi {
+        fun retrofitCliente(): ProductApi {
             val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(
                 GsonConverterFactory.create())
                 .build()

@@ -13,7 +13,7 @@ interface ProductDao{
     fun getProducts(): LiveData<List<Products>>
 
     @Query("SELECT * FROM products WHERE id=:idCode")
-    fun getCardDetail(idCode:Int): LiveData<Products>
+    fun getProductId(idCode:Int): LiveData<Products>
 
     @Insert(onConflict= OnConflictStrategy.REPLACE)
     suspend fun LoadAllProductsDetail(detailList:List<ProductsDetail>)
@@ -31,7 +31,7 @@ interface ProductDao{
 abstract class ProductsDataBase : RoomDatabase(){
     abstract fun productsDao():ProductDao
 }
-class MagicApplication : Application(){
+class ProductsApplication : Application(){
     companion object{
         var productsDataBase: ProductsDataBase? =null
     }
