@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 class ProductViewModel :ViewModel(){
     private val repository=Repository()
     val productlist=repository.productList
-    val detailList=repository.detailList
+   // val detailList=repository.detailList
     init{
         viewModelScope.launch { repository.getProductsFromApi() }
     }
@@ -19,8 +19,13 @@ class ProductViewModel :ViewModel(){
         return repository.loadProduct()
     }
 
-    fun getDetailId(idCode:Int): LiveData<ProductsDetail>? {
-        return repository.getProduct(idCode)
+    fun getDetailId(idCode:Int) {
+       viewModelScope.launch {
+           repository.getProductDetail(idCode)  }
+
     }
+    fun getById(idCode: Int)=repository.getById(idCode)
+
+
 
 }

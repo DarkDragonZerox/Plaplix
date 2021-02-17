@@ -2,12 +2,13 @@ package cl.darkdragonzerox.plaplix.data
 
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface ProductApi {
-    @GET("/products")
+    @GET("products")
     suspend fun getProducts(): Response<List<Products>>
 
-    @GET("/details")
-    suspend fun getDetails():Response<List<ProductsDetail>>
+    @GET("details/{id}")
+    suspend fun getDetails(@Path("id")id:Int):Response<ProductsDetail>
 
 }

@@ -1,6 +1,7 @@
 package cl.darkdragonzerox.plaplix
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,9 @@ class ListFragment:Fragment(), OnItemClickListener {
     }
 
     override fun onClick(id: Int) {
-       activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main_container,DetailFragment(id))?.addToBackStack("back")?.commit()
+        Log.d("id por param", "$id")
+        activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main_container,DetailFragment(id))?.addToBackStack("back")?.commit()
+
+
     }
 }

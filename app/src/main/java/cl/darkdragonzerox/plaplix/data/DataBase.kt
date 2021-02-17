@@ -16,13 +16,13 @@ interface ProductDao{
     fun getProductId(idCode:Int): LiveData<Products>
 
     @Insert(onConflict= OnConflictStrategy.REPLACE)
-    suspend fun LoadAllProductsDetail(detailList:List<ProductsDetail>)
+    suspend fun LoadAllProductsDetail(idCode: Int)
 
     @Query("SELECT * FROM products_detail")
     fun getDetail(): LiveData<List<ProductsDetail>>
 
     @Query("SELECT * FROM products_detail WHERE id=:idCode")
-    fun getProductDetail(idCode:Int): LiveData<ProductsDetail>
+    fun getProductDetail(idCode: Int): LiveData<ProductsDetail>
 
 }
 
